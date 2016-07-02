@@ -31,6 +31,26 @@
 		// add conditional IE 8
 		wp_enqueue_style('future-ie-8', FUTURE_TEMPLATE_PATH . '/assets/css/ie8.css');
 		wp_style_add_data('future-ie-8', 'conditional', 'lt IE 8');
+
+		// add JS to the bottom
+		// jQuery is already added by default
+		/**
+		<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+		**/
+		// add skel.min.js
+		wp_enqueue_script('skel', FUTURE_TEMPLATE_PATH . '/assets/js/skel.min.js', array(), false, true);
+		// add util.js with jquery dependancy
+		wp_enqueue_script('future-util', FUTURE_TEMPLATE_PATH . '/assets/js/util.js', array('jquery'), false, true);
+		// add respond.min.js if lte IE8
+		wp_enqueue_script('respond', FUTURE_TEMPLATE_PATH . '/assets/js/ie/respond.min.js');
+		wp_script_add_data('respond', 'conditional', 'lte IE 8');
+		// now add the main js file
+		wp_enqueue_script('future-main', FUTURE_TEMPLATE_PATH . '/assets/js/main.js', array('jquery'), false, true);
+
 	}
 	add_action('wp_enqueue_scripts', 'future_scripts');
 ?>
