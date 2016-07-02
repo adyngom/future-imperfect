@@ -1,19 +1,4 @@
-/*
-Theme Name: Future Imperfect
-Theme URI: https://techlabs28/themes/future
-Author: techlabs 28
-Author URI: https://techlabs28.com
-Description: Very sleek and simple blog theme designed by the fine folks at HTMl 5 Up and turned into Wordpress by the Techlabs 28 team
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
-Text Domain: future
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
 
 /*
 	Future Imperfect by HTML5 UP

@@ -10,10 +10,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<script src="https://use.fontawesome.com/9d56bc066f.js"></script>
-<link rel="stylesheet" href="assets/css/main.css" />
-<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php wp_head(); ?>
 </head>
 <body>
 
