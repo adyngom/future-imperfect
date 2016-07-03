@@ -2964,6 +2964,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		padding-top: 3.5em;
 	}
 
+	.admin-bar #header {
+		top: 32px;
+	}
+
+	@media screen and (max-width: 782px) {
+		.admin-bar #header {
+			top: 46px;
+		}
+	}
+
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
