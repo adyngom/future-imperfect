@@ -4,6 +4,19 @@
 	*/
 	define('FUTURE_MAIN_STYLE', get_stylesheet_uri());
 	define('FUTURE_TEMPLATE_PATH', get_template_directory_uri());
+
+	if( ! function_exists('future_theme_setup') ) :
+		/**
+		* Sets up theme defaults
+		**/
+		function future_theme_setup() {
+			//add support for post thumbnails
+			add_theme_support( 'post-thumbnails' );
+			set_post_thumbnail_size( 840, 341, array('center', 'center') );
+		}
+	endif;
+	add_action('after_setup_theme', 'future_theme_setup');
+
 	/**
 	 * Enqueues scripts and styles.
 	 *

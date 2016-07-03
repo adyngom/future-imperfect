@@ -16,7 +16,11 @@
 					</a>
 				</div>
 			</header>
-			<a href="<?php the_permalink(); ?>" class="image featured"><img src="<?php echo get_template_directory_uri();?>/images/pic01.jpg" alt="" /></a>
+			<?php if( has_post_thumbnail()) : ?>
+			<a href="<?php the_permalink(); ?>" class="image featured">
+				<?php the_post_thumbnail(); ?>
+			</a>
+		<?php endif; ?>
 			<p>
 				<?php the_excerpt(); ?>
 			</p>
