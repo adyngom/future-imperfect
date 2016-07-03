@@ -4,8 +4,8 @@
 		<section id="intro">
 			<a href="/" class="logo"><img src="<?php future_custom_logo(true); ?>" alt="<?php echo bloginfo('name') . ' | ' . bloginfo('description'); ?>" itemprop="logo" /></a>
 			<header>
-				<h2>Future Imperfect</h2>
-				<p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+				<h2><?php bloginfo('name'); ?></h2>
+				<p><?php bloginfo('description'); ?></p>
 			</header>
 		</section>
 
