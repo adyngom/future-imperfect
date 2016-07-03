@@ -18,7 +18,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <!-- Header -->
 <header id="header">
-	<h1><a href="#">Future Imperfect</a></h1>
+	<h1><a href="/">Future Imperfect</a></h1>
 	<nav class="links">
 		<ul>
 			<li><a href="#">Lorem</a></li>

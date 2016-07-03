@@ -10,9 +10,21 @@
 		* Sets up theme defaults
 		**/
 		function future_theme_setup() {
-			//add support for post thumbnails
+
+			/**
+			* add support for post thumbnails
+			**/
 			add_theme_support( 'post-thumbnails' );
 			set_post_thumbnail_size( 840, 341, array('center', 'center') );
+
+			/*
+			 * add support for custom logo.
+			 **/
+			add_theme_support( 'custom-logo', array(
+				'height'      => 72,
+				'width'       => 72,
+				'flex-height' => false,
+			) );
 		}
 	endif;
 	add_action('after_setup_theme', 'future_theme_setup');
@@ -66,4 +78,27 @@
 
 	}
 	add_action('wp_enqueue_scripts', 'future_scripts');
+
+	/**
+	* Returns the site custom logo
+	* if the $image_url parameter is set to true the url
+	* of the image is return if not
+	* the default wordpress provided markup for the image
+	* is returned
+	* @param boolean @image_url whether to return the image url
+	* @return string image url or whole markup
+	**/
+	function future_custom_logo($image_url = false) {
+	
+		if ( function_exists( 'the_custom_logo' ) ) {
+			if( $image_url ) {
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				echo $image[0];
+			}
+			else {
+				the_custom_logo();
+			}
+		}
+	}
 ?>

@@ -19,7 +19,7 @@
 		</div> <!-- end main -->
 
 	<!-- Sidebar -->
-	<?php get_template_part('sidebar'); ?>
+	<?php get_sidebar(); ?>
 	<!-- // Sidebar -->	
 
 <!-- footer code -->
