@@ -7,7 +7,7 @@
 					<p><?php the_subtitle(); ?></p>
 				</div>
 				<div class="meta">
-					<time class="published" datetime="2015-11-01"><?php the_date(); ?></time>
+					<time class="published" datetime="2015-11-01"><?php echo get_the_date(); ?></time>
 					<a href="#" class="author">
 					<span class="name">
 						<?php the_author_meta('display_name');?>
@@ -16,11 +16,13 @@
 					</a>
 				</div>
 			</header>
+
 			<?php if( has_post_thumbnail()) : ?>
-			<a href="<?php the_permalink(); ?>" class="image featured">
-				<?php the_post_thumbnail(); ?>
-			</a>
-		<?php endif; ?>
+				<a href="<?php the_permalink(); ?>" class="image featured">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			<?php endif; ?>
+
 			<p>
 				<?php 
 					if ( is_single() ) {
@@ -31,6 +33,7 @@
 					}
 				?>
 			</p>
+
 			<footer>
 				<?php if ( ! is_single() ) : ?>
 					<ul class="actions">
@@ -44,6 +47,7 @@
 					<li><a href="#" class="icon fa-comment">128</a></li>
 				</ul>
 			</footer>
+
 		</article>
 	<?php endwhile; ?>
 <?php endif; ?>
