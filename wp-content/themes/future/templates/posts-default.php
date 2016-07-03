@@ -22,12 +22,21 @@
 			</a>
 		<?php endif; ?>
 			<p>
-				<?php the_excerpt(); ?>
+				<?php 
+					if ( is_single() ) {
+						the_content(); 
+					}
+					else {
+						the_excerpt(); 
+					}
+				?>
 			</p>
 			<footer>
-				<ul class="actions">
-					<li><a href="<?php the_permalink(); ?>" class="button big">Continue Reading</a></li>
-				</ul>
+				<?php if ( ! is_single() ) : ?>
+					<ul class="actions">
+						<li><a href="<?php the_permalink(); ?>" class="button big">Continue Reading</a></li>
+					</ul>
+				<?php endif; ?>
 				<ul class="stats">
 					<?php $categories = get_the_category();?>
 					<li><a href="<?php echo get_category_link($categories[0]->term_id); ?>"><?php echo $categories[0]->name; ?></a></li>
