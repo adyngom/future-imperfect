@@ -17,15 +17,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <!-- Header -->
 <header id="header">
-	<h1><a href="/">Future Imperfect</a></h1>
+	<h1><a href="/"><?php echo bloginfo('name'); ?></a></h1>
 	<nav class="links">
-		<ul>
-			<li><a href="#">Lorem</a></li>
-			<li><a href="#">Ipsum</a></li>
-			<li><a href="#">Feugiat</a></li>
-			<li><a href="#">Tempus</a></li>
-			<li><a href="#">Adipiscing</a></li>
-		</ul>
+		<?php if ( has_nav_menu('site-nav') ) :
+				wp_nav_menu( array( 'theme_location' => 'site-nav' ) ); 
+			endif;
+		?>
 	</nav>
 	<nav class="main">
 		<ul>

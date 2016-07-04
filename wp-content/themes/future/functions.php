@@ -33,6 +33,13 @@
 				'width'       => 72,
 				'flex-height' => false,
 			) );
+
+			/**
+			* add the navigation menu
+			**/
+			register_nav_menus( array(
+				'site-nav' => __( 'Site Nav', 'future' )
+			));
 		}
 	endif;
 	add_action('after_setup_theme', 'future_theme_setup');
