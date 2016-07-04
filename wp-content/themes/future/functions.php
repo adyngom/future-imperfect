@@ -109,4 +109,19 @@
 			}
 		}
 	}
+
+	/**
+	* Use filters to pass custom class to previous and next post links
+	* https://css-tricks.com/snippets/wordpress/
+	* add-class-to-links-generated-by-next_posts_link-and-previous_posts_link/
+	**/
+	function future_next_posts_link_attributes() {
+	    return 'class="button big previous"';
+	}
+
+	function future_previous_posts_link_attributes() {
+	    return 'class="button big next"';
+	}
+	add_filter('next_posts_link_attributes', 'future_next_posts_link_attributes');
+	add_filter('previous_posts_link_attributes', 'future_previous_posts_link_attributes');
 ?>
